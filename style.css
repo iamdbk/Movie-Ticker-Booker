@@ -1,0 +1,139 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --grey: rgb(105, 105, 105);
+  --blue: rgb(130, 239, 243);
+}
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(57, 62, 99);
+}
+
+.seat {
+  height: 14px;
+  width: 15px;
+  background-color: var(--grey);
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  margin: 0.15em 0 0.15em 0;
+}
+
+.selected {
+  background-color: var(--blue);
+}
+.occupied {
+  background-color: white;
+}
+
+/* Movie-container ******************************s******/
+.movie-container {
+  margin-bottom: 2em;
+}
+.movie-container label {
+  color: white;
+  font-size: 1.5rem;
+  margin-right: 0.25em;
+  vertical-align: middle;
+}
+
+.movie-container select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+  padding: 0.4em 1em;
+  font-size: 1rem;
+  border-radius: 0.5em;
+  vertical-align: middle;
+  font-weight: bold;
+  /* To make the dropdown text aligned to center*/
+  text-align-last: center;
+  text-align: center;
+  -ms-text-align-last: center;
+  -moz-text-align-last: center;
+}
+
+.movie-container select:focus {
+  outline: 0;
+}
+
+/* showcase************************************* */
+
+.showcase {
+  color: var(--grey);
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(46, 50, 83);
+  font-size: 1.2rem;
+  padding: 0.4em 0.8em;
+  margin-bottom: 1.8em;
+}
+
+.showcase li {
+  display: flex;
+}
+.showcase li div {
+  margin-right: 0.3em;
+}
+li + li {
+  margin-left: 1.5em;
+}
+
+/* Seats section with the screen********************************** */
+.screen {
+  border-top: 45px solid white;
+  /* border-left: 5px solid transparent;
+  border-right: 5px solid transparent; */
+
+  height: 0;
+  width: 100%;
+  margin-bottom: 1.8em;
+  box-shadow: 0 0 15px white;
+}
+
+.container {
+  margin-bottom: 1.8em;
+}
+.only-seats {
+  display: flex;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0.2em 0 0.2em;
+}
+
+.m-right {
+  margin-right: 1.2em;
+}
+.m-left {
+  margin-left: 1.2em;
+}
+
+.col > .seat:hover {
+  transform: scale(1.2);
+}
+
+.col > .seat.occupied:hover {
+  transform: scale(1);
+}
+
+/* Last line text */
+.text {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.text span {
+  color: var(--blue);
+}
